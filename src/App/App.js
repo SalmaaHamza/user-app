@@ -10,8 +10,10 @@ import HomeModule from '../modules/HomeModule'
 function App(){
 
     return (
-            <div className="App container-fluid bg-dark">
+		<div className="App">
+			<div id="overlay">
 					<Header />
+			</div>
 					<BrowserRouter>
 						<Routes>
               				<Route path="/" element={<HomeModule/>} />
