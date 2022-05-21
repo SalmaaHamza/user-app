@@ -1,16 +1,11 @@
-import { React } from "react";
+import { React, useState } from "react";
 import "bootstrap/dist/css/bootstrap.css";
-import Search from "./Search";
-import {
-  Navbar,
-  Nav,
-  NavDropdown,
-  Container,
-  FormControl,
-  Form,
-  Button,
-} from "react-bootstrap";
+import { Navbar, Nav, NavDropdown, Container } from "react-bootstrap";
 const Header = () => {
+  // const [selectedType, setSelectedType] = useState(0);
+  // const [selectedGenre, setSelectedGenre] = useState(0);
+  // const types = ["Movies", "Series"];
+  // const genere = ["G1", "G2", "G3"];
   return (
     <div className="text-light">
       <Navbar expand="lg">
@@ -30,8 +25,17 @@ const Header = () => {
               className="me-auto my-2 my-lg-0 text-light"
               style={{ maxHeight: "100px" }}
               navbarScroll
-            ></Nav>
-            <Search />
+            >
+              <Nav.Link className="text-light" href="/">
+                Home
+              </Nav.Link>
+              <Nav.Link className="text-light" href="/movies">
+                Movies
+              </Nav.Link>
+              <Nav.Link className="text-light" href="/series">
+                Series
+              </Nav.Link>
+            </Nav>
           </Navbar.Collapse>
         </Container>
       </Navbar>

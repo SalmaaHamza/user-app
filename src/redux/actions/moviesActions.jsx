@@ -10,15 +10,12 @@ export const getAllMovies = () => (dispatch) => {
   });
 };
 
-export const getMovieById = (id) =>(dispatch) => {
-  fetchMovieById(id)?.then(res => {
+export const getMovieById = (id) => (dispatch) => {
+  fetchMovieById(id)?.then((res) => {
     dispatch({
       type: GET_MOVIE_BY_ID,
-      payload: res.data
+      payload: res.data,
     });
- })
+  });
 };
 
-export const getMovies = (searchKey = null) => (dispatch) => {
-
-}

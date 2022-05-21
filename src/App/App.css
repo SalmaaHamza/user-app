@@ -6,10 +6,10 @@ body {
 	cursor: pointer;
 	transform: scale(1.02);
 }
-
 .movie-app > .row {
 	overflow-x: scroll;
 	flex-wrap: nowrap;
+	margin-block-start: auto;
 }
 .movie-app > .row::-webkit-scrollbar {
   display: none;
