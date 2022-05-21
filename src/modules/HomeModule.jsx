@@ -1,21 +1,23 @@
-import React from "react";
+import { React, useEffect } from "react";
 import MovieRow from "../components/MovieRow";
 import Trail from "../components/Trail";
-import "bootstrap/dist/css/bootstrap.css";
+import { getAllMovies } from "../redux/actions/moviesActions";
+import { useDispatch } from "react-redux";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const HomeModule = () => {
-  const items = Array(5).fill(0);
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getAllMovies());
+  }, [dispatch]);
 
   return (
-      <div className="container-fluid bg-dark pb-4">
-        <Trail />
-      {items.map(() => (
-        <div className="my-3 text-align-start">
-          <h1 className="text-light my-3 text-lg-left"> This Header</h1>
-          <MovieRow />
-        </div>
-      ))}
-    </div>
+    <>
+      <Trail />
+      <div className='row'>
+        <MovieRow/>
+      </div>
+    </>
   );
 };
 

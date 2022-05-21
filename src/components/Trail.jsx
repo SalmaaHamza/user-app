@@ -1,20 +1,15 @@
-import React from 'react';
-
+import React from "react";
+import '../styles/Trail.module.css'
 const Trail = () => {
 
-    return (
-      <div className="row">
-        <iframe
-          height={600}
-          src="https://www.youtube.com/embed/pt81CJcWZy8?autoplay=0&showinfo=0&controls=0&showinfo=0"
-          title="YouTube video player"
-          frameborder="2"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-          className="w-100"
-        ></iframe>
-      </div>
-    );
+  return (
+    <div className="w-100" >
+      <video width="100%" height="600">
+        <source src="Trailer.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  );
 };
 
 export default Trail;
