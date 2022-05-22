@@ -4,7 +4,7 @@ import Movie from "./Movie";
 import "../styles/Movie.module.css";
 // import { NavigateBeforeIcon, NavigateNextIcon } from "@mui/icons-material";
 
-const MovieRow = ({movies}) => {
+const MovieRow = ({ movies }) => {
   return (
     <div className="image-container d-flex align-items-start mt-4 mb-4">
       {movies?.map((e) => <Movie key={e?._id} movie={e}></Movie>) ?? (

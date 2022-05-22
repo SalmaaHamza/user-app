@@ -7,7 +7,7 @@ import { Provider } from 'react-redux';
 import store from "../redux/store";
 import FeatureMovie from '../components/FeatureMovie';
 import  Home  from '../pages/Home'
-
+import MovieDetails from '../components/MovieDetails';
 function App(){
 
 	return (
@@ -21,7 +21,8 @@ function App(){
 						<Route path="/"  element={<Home />} />
 						<Route path="/test" element={<FeatureMovie />} />
 						<Route path="/movies" element=  {<Home type="Movies" />} />
-						<Route path="/series"   element={<Home type="Series" />} />
+						<Route path="/series" element={<Home type="Series" />} />
+						<Route path="/movie/:id" element={<MovieDetails/>} />
 				</Routes>
 			</BrowserRouter>
 
