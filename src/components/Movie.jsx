@@ -14,9 +14,9 @@ const Movie = ({ movie }) => {
         alt={movie?.title}
         width="95%"
         height="30%"
-        // onClick={() => setModalShow(true)}
+        onClick={() => setModalShow(true)}
       />
-      {/* <MovieDetails show={modalShow} onHide={() => setModalShow(false)} /> */}
+      <MovieDetails show={modalShow} movie={movie} onHide={() => setModalShow(false)} />
     </div>
   );
 };
