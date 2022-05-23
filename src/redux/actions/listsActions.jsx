@@ -1,7 +1,7 @@
 import { fetchList } from "../../api/listAPIs";
 import { GET_LISTS } from "../actionTypes";
 
-const listsActions = (type, genere) => (dispatch) => {
+const getAllLists = (type, genere) => (dispatch) => {
   fetchList(type, genere)?.then((res) => {
     console.log(res.data);
     dispatch({
@@ -11,4 +11,4 @@ const listsActions = (type, genere) => (dispatch) => {
   });
 };
 
-export default listsActions;
+export default getAllLists;
