@@ -6,10 +6,6 @@ import { useSelector } from "react-redux";
 const HomeModule = () => {
   const listMovies = useSelector((state) => state.lists);
 
-  // const dispatch =x useDispatch();
-  useEffect(() => {
-    console.log(listMovies);
-  });
   return (
     <>
       <Trail />

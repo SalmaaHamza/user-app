@@ -1,6 +1,7 @@
 body {
-	background-color: #141414;
+	background-color: #0b0b0b;
 	color: #ffffff;
+	font-family: 'Roboto', sans-serif;
 }
 .image-container:hover {
 	cursor: pointer;

@@ -11,13 +11,13 @@ const Header = () => {
       <Navbar expand="lg">
         <Container fluid>
           <Navbar.Brand href="/">
-            <img
+            {/* <img
               src="https://www.freepnglogos.com/uploads/netflix-logo-0.png"
-              width="150"
+              width="10"
               height="60"
               className="d-inline-block align-top"
               alt="React Bootstrap logo"
-            />
+            /> */}
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">

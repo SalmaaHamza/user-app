@@ -13,7 +13,7 @@ const Movie = ({ movie }) => {
         src={movie?.image}
         alt={movie?.title}
         width="95%"
-        height="30%"
+        height="250"
         onClick={() => setModalShow(true)}
       />
       <MovieDetails show={modalShow} movie={movie} onHide={() => setModalShow(false)} />
