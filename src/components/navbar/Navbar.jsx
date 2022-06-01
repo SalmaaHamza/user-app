@@ -1,22 +1,36 @@
 import { ArrowDropDown, Search, Notifications } from "@material-ui/icons";
 import { React, useState } from "react";
 import styles from "./Navbar.module.css";
+import { Link } from 'react-router-dom';
+import "bootstrap/dist/css/bootstrap.min.css";
 const Navbar = () => {
   return (
     <div className={styles.navbar}>
       <div className={styles.container}>
-        <div className={styles.left}>
+        <div className="d-flex flex-row flex-start">
           <img
             src="https://www.freepnglogos.com/uploads/netflix-logo-0.png"
             alt="NetflixLogo"
             className={styles.logoImg}
           />
-          <span className={styles.navItem}> Home </span>
-          <span className={styles.navItem}> Movie </span>
-          <span className={styles.navItem}> Series </span>
-          <span className={styles.navItem}> {"TV Shows"} </span>
+          <Link to="/" className={`col-2 text-light ${styles.navItem}`}>
+            {" "}
+            Home{" "}
+          </Link>
+          <Link to="/movies" className={`col-2 text-light ${styles.navItem}`}>
+            {" "}
+            Movie{" "}
+          </Link>
+          <Link to="/series" className={`col-2 text-light ${styles.navItem}`}>
+            {" "}
+            Series{" "}
+          </Link>
+          <Link to="/tvShows" className={`col-3 text-light ${styles.navItem}`}>
+            {" "}
+            TV Shows
+          </Link>
         </div>
-        <div className={styles.right}>
+        <div className="d-flex flex-row p-3">
           <Search className={styles.icon} />
           <Notifications className={styles.icon} />
           <img
