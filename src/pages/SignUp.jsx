@@ -1,30 +1,38 @@
-import React, { Component,useState } from 'react';
+import React, { Component, useState } from 'react';
 import { GlobalStyles } from '../styles/global-styles';
 import HeaderContainer from '../components/Welcome/Container/Header';
 import Form from '../components/Welcome/Form/index';
 import { FooterContainer } from '../components/Welcome/Container/Footer';
-import {signup } from '../api/userAPIs';
+import { signup } from '../api/userAPIs';
+import { useNavigate } from "react-router-dom";
+
 
 export default function SignUp() {
+    let navigate = useNavigate();
     const [UserName, setUserName] = useState('');
     const [EmailAddress, setEmailAddress] = useState('');
     const [Phone, setPhone] = useState('');
-    const [Password,setPassword] = useState('');
+    const [Password, setPassword] = useState('');
     const handleSignup = (event) => {
         event.preventDefault();
-        console.log(Password);
-        const user={
-            userName:UserName, 
-            email:EmailAddress,
-            password:Password,
-            image:"noimage",
-            phone:Phone,
-            role:"user",
+        const user = {
+            userName: UserName,
+            email: EmailAddress,
+            password: Password,
+            image: "noimage",
+            phone: Phone,
+            role: "user",
         }
-        signup(user).then((data)=>
-        console.log(data)
-        );
-        };
+        signup(user).then((data) => {
+            if (data.data.statusCode == 200) {
+                navigate('/Home');
+            }
+            else {
+                alert(data.data.error);
+            }
+        });
+
+    };
     return (
         <React.Fragment>
             <GlobalStyles />
@@ -33,7 +41,7 @@ export default function SignUp() {
                     <Form.Title>Sign Up</Form.Title>
                     {/* {error && <Form.Error>{error}</Form.Error>} */}
 
-                    <Form.Base onSubmit={handleSignup} >
+                    <Form.Base onSubmit={handleSignup}>
                         <Form.Input
                             placeholder="User Name"
                             onChange={({ target }) => setUserName(target.value)}
@@ -58,7 +66,7 @@ export default function SignUp() {
                     </Form.Base>
 
                     <Form.Text>
-                        Already a user? <Form.Link  to="/signin">Sign in now.</Form.Link>
+                        Already a user? <Form.Link to="/signin">Sign in now.</Form.Link>
                     </Form.Text>
                     <Form.TextSmall>
                         This page is protected by Google reCAPTCHA to ensure you're not a bot.

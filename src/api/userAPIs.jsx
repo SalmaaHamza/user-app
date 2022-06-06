@@ -4,4 +4,4 @@ import axios from "axios";
 
 
 export const signup =(user) => axios.post(api.endpoints.addUser,user);
-export const signin = (email, password) => axios.get(api.endpoints.addUser( email, password));
+export const signin = (user) => axios.post(api.endpoints.signIn,user);
