@@ -5,4 +5,6 @@ export const endpoints = {
   getAllMovies: `${URL}/allMovies`,
   getMovieById: (id) => `${URL}/getMovieById/${id}`,
   getAllLists: (type = null) => `${URL}/list${type ? "?type=" + type :'?'}`,
+  signIn:(email, password )=>`${URL}/signIn/${email,password}`,
+  addUser:`${URL}/addUser/`,
 };
