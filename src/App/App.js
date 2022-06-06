@@ -26,11 +26,11 @@ function App() {
 					<Route path='/' element={<Welcome/>} />
 					<Route path='/signin' element={<SignIn/>} />
 					<Route path='/signup' element={<SignUp/>} />
-					{/* <Route path="/"  element={<Home />} />
-						<Route path="/test" element={<FeatureMovie />} />
-						<Route path="/movies" element=  {<Home type="Movies" />} />
-						<Route path="/series" element={<Home type="Series" />} />
-						<Route path="/movie/:id" element={<MovieDetails/>} /> */}
+					<Route path="/Home"  element={<Home />} />
+					<Route path="/test" element={<FeatureMovie />} />
+					<Route path="/movies" element=  {<Home type="Movies" />} />
+					<Route path="/series" element={<Home type="Series" />} />
+					<Route path="/movie/:id" element={<MovieDetails/>} /> 
 				</Routes>
 			</BrowserRouter>
 
