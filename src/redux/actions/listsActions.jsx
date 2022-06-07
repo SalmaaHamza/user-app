@@ -3,7 +3,7 @@ import { GET_LISTS } from "../actionTypes";
 
 const getAllLists = (type, genere) => (dispatch) => {
   fetchList(type, genere)?.then((res) => {
-    console.log(res.data);
+    // console.log(res.data);
     dispatch({
       type: GET_LISTS,
       payload: res.data,

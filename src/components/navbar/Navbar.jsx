@@ -1,7 +1,7 @@
 import { ArrowDropDown, Search, Notifications } from "@material-ui/icons";
 import { React, useState } from "react";
 import styles from "./Navbar.module.css";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 const Navbar = () => {
   return (
@@ -21,11 +21,8 @@ const Navbar = () => {
             {" "}
             Movie{" "}
           </Link>
-          <Link to="/series" className={`col-2 text-light ${styles.navItem}`}>
-            {" "}
-            Series{" "}
-          </Link>
-          <Link to="/tvShows" className={`col-3 text-light ${styles.navItem}`}>
+
+          <Link to="/tvshow" className={`col-3 text-light ${styles.navItem}`}>
             {" "}
             TV Shows
           </Link>

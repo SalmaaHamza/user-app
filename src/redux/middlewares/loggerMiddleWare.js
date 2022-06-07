@@ -1,5 +1,5 @@
 const middleware = (store) => (next) => (action) => {
-	console.log("State before your action", action, "was", store.getState());
+	// console.log("State before your action", action, "was", store.getState());
 	// do whatever logic
 	return next(action);
 };

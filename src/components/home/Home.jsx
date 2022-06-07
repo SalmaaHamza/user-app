@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "../navbar/Navbar";
 import styles from "./Home.css";
-import Featured from "../featured/Featured";
+import HeaderMovie from "../featured/HeaderMovie";
 import MovieList from "../movieList/MovieList";
 import { useSelector } from "react-redux";
 const Home = ({ type }) => {
@@ -9,7 +9,11 @@ const Home = ({ type }) => {
   return (
     <div className="home">
       <Navbar />
-      <Featured type={type} />
+      <HeaderMovie
+        type={type}
+        movies={moviesList?.map((c) => c.content)?.flat(1) ?? []}
+      />
+
       {moviesList?.map((list) => (
         <MovieList movies={list?.content} title={list?.title} />
       ))}
